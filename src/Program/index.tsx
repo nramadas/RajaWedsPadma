@@ -36,7 +36,7 @@ export default function Invitation(props: Props) {
         <h3>6:30am - 8:30am</h3>
       </p>
       <p>
-        <h2>Mehendi</h2>
+        <h2>Muhurtham</h2>
         <h3>9:00am - 10:30am</h3>
       </p>
       <p>
@@ -44,7 +44,7 @@ export default function Invitation(props: Props) {
         <h3>11:00am - 2:00pm</h3>
       </p>
       <p>
-        <a href="www.zola.com/wedding/padmaandraja">www.zola.com/wedding/padmaandraja</a>
+        <a href="https://www.zola.com/wedding/padmaandraja">www.zola.com/wedding/padmaandraja</a>
         <a href="mailto:royal.lotus.0405@gmail.com">royal.lotus.0405@gmail.com</a>
       </p>
       <p>

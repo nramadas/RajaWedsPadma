@@ -43,7 +43,7 @@ export default function Invitation(props: Props) {
         <h2>Old No.2/322, New No.2/351, Medavakkam Main Road</h2>
         <h2>Kovilambakkam, Chennai 600 177</h2>
         <h2>Ph: 044 4864 5555, +91 98407 71476</h2>
-        <a href="www.vrtm.in">www.vrtm.in</a>
+        <a href="https://www.vrtm.in">www.vrtm.in</a>
       </p>
       <p>
         <h3>Muhurtam: 9:00am to 10:30am</h3>
