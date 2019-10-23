@@ -1,0 +1,308 @@
+@mixin envelope() {
+  backface-visibility: hidden;
+  background-color: #FFF;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-sizing: border-box;
+  height: 300px;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -150px;
+  position: fixed;
+  top: 50%;
+  transform-origin: center;
+  width: 500px;
+}
+
+@mixin flap() {
+  height: 160px;
+  left: 50%;
+  margin-left: -107px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform-origin: top;
+  z-index: 1;
+}
+
+@mixin letter() {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #c8c8c8;
+  bottom: 5px;
+  box-sizing: border-box;
+  height: 290px;
+  position: absolute;
+  width: 450px;
+}
+
+@keyframes frontAnim {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes backAnim1 {
+  from {
+    transform: rotateY(180deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes flapAnim {
+  from {
+    transform: scale(2.33, 1) rotate3d(1, 0, 0, 0deg);
+  }
+
+  to {
+    transform: scale(2.33, 1) rotate3d(1, 0, 0, 180deg);
+  }
+}
+
+@keyframes phase3envelope {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes phase3letter3 {
+  0% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes phase3letter4 {
+  0% {
+    margin-left: -150px;
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    margin-left: 305px;
+    transform: rotate(0);
+  }
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid rgb(163, 61, 140);
+  border-radius: 4px;
+  color: rgb(163, 61, 140);
+  cursor: pointer;
+  outline: none;
+  padding: 8px 16px;
+  text-transform: uppercase;
+}
+
+.back {
+  @include envelope;
+
+  background-color: rgba(200, 200, 200, 1);
+  transform: rotateY(180deg) translateY(1px);
+}
+
+.clip {
+  bottom: 49%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.flapFront {
+  @include flap;
+
+  transform: scale(2.33, 1);
+
+  .flapBuffer,
+  .flapTriangle {
+    background-color: #fff;
+  }
+}
+
+.flapBuffer {
+  height: 50px;
+  width: 213px;
+  position: relative;
+  z-index: 1;
+  border-left: 1px solid #c8c8c8;
+  border-right: 1px solid #c8c8c8;
+}
+
+.flapTriangle {
+  border: 1px solid #c8c8c8;
+  height: 150px;
+  width: 150px;
+  transform: rotate(45deg);
+  transform-origin: center;
+  margin-top: -76px;
+  margin-left: 31px;
+}
+
+.front {
+  @include envelope;
+
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  transform: translateY(1px);
+
+  &:hover {
+    button {
+      background-color: rgb(163, 61, 140);
+      color: #FFF;
+    }
+  }
+}
+
+.letter1 {
+  @include letter;
+
+  left: 20px;
+}
+
+.letter2 {
+  @include letter;
+
+  left: 30px;
+}
+
+.letter3 {
+  @include letter;
+
+  height: 450px;
+  left: 50%;
+  margin-left: -140px;
+  margin-top: -225px;
+  position: fixed;
+  top: 50%;
+  transform: rotate(-90deg);
+  width: 290px;
+}
+
+.letter4 {
+  @include letter;
+
+  height: 450px;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -225px;
+  position: fixed;
+  top: 50%;
+  transform: rotate(-90deg);
+  width: 290px;
+}
+
+.name {
+  color: rgb(163, 61, 140);
+  font-size: 42px;
+}
+
+.stamp {
+  height: 40px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 40px;
+}
+
+.text {
+  color: rgb(161, 139, 120);
+  font-size: 16px;
+  font-weight: bold;
+  margin: 7px 12px;
+  text-transform: uppercase;
+}
+
+.title {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 16px;
+}
+
+.tlbr {
+  background-color: #fff;
+  border: 1px solid #c8c8c8;
+  height: 300px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(31deg) translateY(282px) translateX(-40px);
+  width: 1005px;
+}
+
+.trbl {
+  background-color: #fff;
+  border: 1px solid #c8c8c8;
+  height: 300px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(-31deg) translateY(22px) translateX(-40px);
+  width: 1005px;
+}
+
+.bottom {
+  background-color: #fff;
+  border-radius: 0 0 4px 4px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 51%;
+}
+
+.x1 {
+  .back {
+    animation: backAnim1 1s forwards;
+  }
+
+  .front {
+    animation: frontAnim 1s forwards;
+  }
+}
+
+.x2 {
+  .front {
+    display: none;
+  }
+
+  .flapBack,
+  .flapFront {
+    animation: flapAnim 1s forwards;
+  }
+}
+
+.x3 {
+  .envelope {
+    animation: phase3envelope 1s linear forwards;
+  }
+
+  .letter3 {
+    animation: phase3letter3 1s linear forwards;
+  }
+
+  .letter4 {
+    animation: phase3letter4 1s linear forwards;
+  }
+}
