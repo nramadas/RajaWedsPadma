@@ -31,19 +31,19 @@ const App: React.FC = () => {
           }) } />
           <div
             className={ cx(styles.circleLeft, {
-              [styles.circleDisabled]: currentSlide !== Slide.Invitation,
-            }) }
-            onClick={ () => setSlide(Slide.Program) }
-          >
-            ⇽
-          </div>
-          <div
-            className={ cx(styles.circleRight, {
               [styles.circleDisabled]: currentSlide !== Slide.Program,
             }) }
             onClick={ () => setSlide(Slide.Invitation) }
           >
-            ⇾
+            ◄
+          </div>
+          <div
+            className={ cx(styles.circleRight, {
+              [styles.circleDisabled]: currentSlide !== Slide.Invitation,
+            }) }
+            onClick={ () => setSlide(Slide.Program) }
+          >
+            ►
           </div>
         </> }
     </div>
