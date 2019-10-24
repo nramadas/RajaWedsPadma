@@ -44,7 +44,7 @@ export default function Invitation(props: Props) {
         <h3>11:00am - 2:00pm</h3>
       </p>
       <p>
-        <a href="https://www.zola.com/wedding/padmaandraja">www.zola.com/wedding/padmaandraja</a>
+        <a href="https://www.zola.com/wedding/padmaandraja" target="_blank">www.zola.com/wedding/padmaandraja</a>
         <a href="mailto:royal.lotus.0405@gmail.com">royal.lotus.0405@gmail.com</a>
       </p>
       <p>
